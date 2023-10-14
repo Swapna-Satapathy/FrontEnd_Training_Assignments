@@ -1,0 +1,44 @@
+<html>
+    <head> 
+        <style>
+            figure
+			{
+				border: 5px solid purple;
+				border-radius : 10px;
+				padding : 5px;
+				width : 300px;
+			}			
+        </style>      
+    </head>
+    <body>
+        <figure>
+
+		<label>Product Name : </label>
+		<input  type="text"  id="t1"  />
+		 <br/><br/>
+         <label>Unit Price :</label>
+         <input type="text" id="t2" />
+         <br/><br/>
+         <label>Quantity :</label>
+         <input type="text" id="t3" />
+         <br/><br/>
+		<input type="button"   value="Multiply"   onclick="multiplyBy()"  /> 
+        <br/>
+        <p>Total Amount :
+            <span id="t4"></span>
+        </p>
+        <br/>
+
+		<script>
+				function   multiplyBy()
+				{
+        num1 = document.getElementById("t2").value;
+        num2 = document.getElementById("t3").value;
+        document.getElementById("t4").innerHTML= num1 * num2;
+                }
+
+		</script>
+        </figure>
+
+    </body>
+</html>
