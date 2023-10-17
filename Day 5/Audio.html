@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Play/Pause Example</title>
+</head>
+<body>
+<h2>Audio Example</h2>
+<audio id="my audio" src="Day 5/Mere Liye - Akhil Sachdeva.mp3"></audio>
+
+<button onclick="playAudio()">Play</button>
+<button onclick="pauseAudio()">Pause</button>
+
+<script>
+var audio = document.getElementById("my audio");
+
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
+}
+</script>
+
+</body>
+</html>
