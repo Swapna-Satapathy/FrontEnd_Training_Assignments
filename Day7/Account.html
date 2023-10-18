@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <link href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" rel="stylesheet" />
+  <style>
+    .c
+    {
+        color: red;
+    }
+    #h1
+    {
+        text-align: center;
+        color: darkblue;
+    }
+  </style>
+    </head>
+    <body style="font-weight: bold;">
+        <h3 id="h1">Bank Account Opening Form</h3>
+        <form  id="form1"  
+				action="#" 		
+				autocomplete="off"	
+				method="GET">
+  
+    <fieldset>
+        Name on Account<span class="c">*</span>
+        <br/>
+        <input type="text" placeholder="First Name" required >
+        <br/>
+        <input type="text" placeholder="Middle Name" required >
+        <br/>
+        <input type="text" placeholder="Last Name" required >
+        <br/>
+        Date Of Birth
+        <br/>
+        <input type="date" name="x1">
+        <br/><br/>
+        Account Number<span class="c">*</span>
+        <br/>
+        <input type="number" autofocus required >
+        <br/><br/>
+        Account type
+        <br/>
+        <input type="radio" name="t1" value="Saving Account" >Saving Account
+        <br/>
+        <input type="radio" name="t1" value="Current Account" >Current Account
+        <br/><br/>
+        Address<span class="c">*</span>
+        <br/>
+        <input type="text" placeholder="Please Enter Full Address" required >
+        <br/>
+        <input type="text" placeholder="City" required >
+        <br/>
+        <input type="text" placeholder="State" required >
+        <br/>
+        <input type="text" pattern="\d{6}" placeholder="Pincode" required >
+        <br/>
+        Occupation
+        <br/>
+        <select id="d1" name="d1">
+            <option value="Private Sector">Private Sector</option>
+            <option value="BSc">BSc</option>
+            <option value="MSc">MSc</option>
+            <option value="BTech">BTech</option>
+            <option value="UG">UG</option>
+        </select>
+        
+        Phone Number<span class="c">*</span>
+        <br/>
+        <select id="s1" name="s1">
+            <option>Home</option>
+            <option>Alternate</option>
+            <option>Personal</option>
+        </select>
+        <br/><br/>
+        <input type="number" placeholder="Enter Mobile Number" required >
+        
+        <br/><br/>
+        <input type="submit"  value="Submit"  class="button expanded primary">
+        <br/>
+    </fieldset>
+</form>
+        <input type="checkbox" form="form1" name="ck1" >
+        I agree to the terms and conditions.<span class="c">*</span>
+    
+    </body>
+</html>
