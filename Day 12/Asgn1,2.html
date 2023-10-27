@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+       <fieldset>
+        <legend>User Login Page</legend>
+
+        User Name :
+        <input type="text" id="t1" autofocus>
+        <br><br>
+        Password :
+        <input type="password" id="t2">
+        <br><br>
+        <input type="button" value="Login" onclick="checkLogin()">
+       </fieldset>
+       <p id="p1"></p>
+        <script>
+            function checkLogin()
+            {
+                var txtObj1 = document.getElementById('t1');
+                var txtObj2 = document.getElementById('t2');
+                var paraObj = document.getElementById('p1');
+                var uname = txtObj1.value;
+                var pwd = txtObj2.value;
+                
+                if(uname === "Swapna" && pwd === "swapna17")
+                {
+                    paraObj.textContent = "Welcome to Swapna";
+                    paraObj.style.color = "green";
+                }
+                else{
+                    paraObj.textContent = "Invalid User ID or password";
+                    paraObj.style.color = "red";
+                }
+            }
+        </script>
+        
+    </body>
+</html>

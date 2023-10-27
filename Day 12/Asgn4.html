@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h3>Mathematical expressions</h3>
+        First Number : <input type="text" id="n1">
+        <br><br>
+        Second Number : <input type="text" id="n2">
+        <br><br>
+        <input type="button" value="Add" onclick="f1()">
+        <input type="button" value="Sub" onclick="f2()">
+        <input type="button" value="Multiply" onclick="f3()">
+        <input type="button" value="Divide" onclick="f4()">
+        <br><br>
+        <p id="p1">Result :</p>
+        <script>
+          function f1()
+          {
+           var txtObj1 = document.getElementById("n1");
+           var txtObj2 = document.getElementById("n2");
+           var paraObj = document.getElementById("p1");
+           var add = parseInt(txtObj1.value) + parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + add;
+          }
+          function f2()
+          {
+           var txtObj1 = document.getElementById("n1");
+           var txtObj2 = document.getElementById("n2");
+           var paraObj = document.getElementById("p1");
+           var sub = parseInt(txtObj1.value) - parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + sub;
+          }
+          function f3()
+          {
+           var txtObj1 = document.getElementById("n1");
+           var txtObj2 = document.getElementById("n2");
+           var paraObj = document.getElementById("p1");
+           var multiply = parseInt(txtObj1.value) * parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + multiply;
+          }
+          function f4()
+          {
+           var txtObj1 = document.getElementById("n1");
+           var txtObj2 = document.getElementById("n2");
+           var paraObj = document.getElementById("p1");
+           var div = parseInt(txtObj1.value) / parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + div;
+          }
+        </script>
+    </body>
+</html>

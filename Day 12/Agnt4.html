@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>Mathematical expressions</h3>
+        First Number : <input type="text" id="n1">
+        <br><br>
+        Second Number : <input type="text" id="n2">
+        <br><br>
+        <input type="button" value="Add" onclick="f1(event)">
+        <input type="button" value="Sub" onclick="f1(event)">
+        <input type="button" value="Multiply" onclick="f1(event)">
+        <input type="button" value="Divide" onclick="f1(event)">
+        <br><br>
+        <p id="p1">Result :</p>
+        <script>
+            function f1(event)
+            {
+                var txtObj1 = document.getElementById("n1");
+                var txtObj2 = document.getElementById("n2");
+                var paraObj = document.getElementById("p1");
+
+                switch(event.target.value)
+         {
+              case "Add" :
+              var add = parseInt(txtObj1.value) + parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + add;
+           break;
+           case "Sub" :
+           var sub = parseInt(txtObj1.value) - parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + sub;
+           break;
+           case "Multiply" :
+           var multiply = parseInt(txtObj1.value) * parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + multiply;
+           break;
+           case "Divide" :
+           var divide = parseInt(txtObj1.value) / parseInt(txtObj2.value);
+           paraObj.innerText = "Result :" + divide;
+           break;
+         }
+            }
+       
+        </script>
+    </body>
+</html>

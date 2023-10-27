@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+       <h4>Product Details</h4>
+       <hr>
+            Product Name :
+            <input type="text" id="t1">
+            <br><br>
+            Price :
+            <input type="text" id="t2">
+            <br><br>
+            Quantity :
+            <input type="text" id="t3">
+            <br><br>
+            <input type="button" value="Amount" onclick="amount()">
+            <p id="p1">Total Amount :</p>
+            <p id="p2">Discount Amount :</p>
+            <p id="p3">Final Amount :</p>
+
+        <script>
+            function amount()
+            {
+                var txtObj1 = document.getElementById("t2");
+                var txtObj2 = document.getElementById("t3");
+
+                var paraObj1 = document.getElementById("p1");
+                var paraObj2 = document.getElementById("p2");
+                var paraObj3 = document.getElementById("p3");
+                
+                var price = parseFloat(txtObj1.value);
+                var qty = parseInt(txtObj2.value);
+                 
+                var total = price * qty ;
+                var discount = 0;
+
+                if ( qty > 30)
+                {
+                 discount = total * 0.2 ;
+                }
+                else if ( qty > 20)
+                {
+                    discount = total * 0.15 ;
+                }
+                else if ( qty > 10)
+                { 
+                    discount = total * 0.1;
+                }
+               
+                var finalAmount = total - discount ;
+                paraObj1.innerText = "Total Amount : " + total.toFixed(2);
+                paraObj2.innerText = "Discount Amount : " + discount.toFixed(2);
+                paraObj3.innerText = "Final Amount : " + finalAmount.toFixed(2);
+            }
+        </script>
+    </body>
+</html>
