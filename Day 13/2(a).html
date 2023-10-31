@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h3>Employee Details</h3>
+        <hr>
+       
+        <input type="button" value="Get Data" onclick="fn_getData1()" />
+        <br>
+        <table id="table1" border="2" width="500">
+            <tr>
+                <th>EmpNo</th>
+                <th>EmpName</th>
+                <th>Salary</th>
+                <th>Job</th>
+                <th>DeptNo</th>
+            </tr>
+           
+        </table>
+        <script>
+            var tableObj = document.getElementById("table1");
+            var empArray = [
+                {empno : 2358, empname : "Shruti" , slry : 25000 , job : "Associate Analyst", deptno : 89},
+                {empno : 2368, empname : "Shreya" , slry : 76000 , job : " Analyst", deptno : 120},
+                {empno : 2658, empname : "Sweety" , slry : 20000 , job : "Associate Analyst", deptno : 80},
+                {empno : 3358, empname : "Seema" , slry : 32000 , job : " Analyst", deptno : 64},
+                {empno : 2898, empname : "Sonal" , slry : 46000 , job : "Associate Analyst", deptno : 120},
+                {empno : 4558, empname : "Subha" , slry : 68000 , job : "Analyst", deptno : 36},
+                {empno : 8978, empname : "Poonam" , slry : 43000 , job : "Associate Analyst", deptno : 65},
+                {empno : 6789, empname : "Pooja" , slry : 36000 , job : "Analyst", deptno : 38},
+            ];
+            function fn_getData1()
+            {
+                var str = "";
+
+                for(let item of empArray)
+                {
+                    str += `<tr> <td> ${item.empno} </td> <td> ${item.empname} </td> <td> ${item.slry} </td> <td> ${item.job} </td> <td> ${item.deptno} </td> </tr>`;
+                }
+                
+                tableObj.innerHTML = str ;
+            }
+        </script>
+       
+  
+    </body>
+</html>

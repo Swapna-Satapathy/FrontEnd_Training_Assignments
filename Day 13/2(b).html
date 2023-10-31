@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div
+            {
+                border:2px solid black;
+                color : black;
+                font-size: 14px;
+                height:  90px;
+                padding : 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>Create Objects</h4>
+        <hr>
+        <input type="button" value="Object-1" onclick="f1()" />
+        <input type="button" value="Object-2" onclick="f2()" />
+        <input type="button" value="Object-3" onclick="f3()" />
+        <br><br>
+        <div id="div1"></div>
+
+<script> 
+
+var divObj = document.getElementById("div1");
+
+    function f1()
+      {		
+		// Object Initializer
+	    var emp  = { eno :  1025,  ename : "Seema" , slry : 25000 , job : "Analyst" , deptno : 45 };
+        //var str =  "Employee No :" + eno + "Employee Name :" + ename + "Salary :" + slry + "Job :" + job + "Dept. No :" + deptno ;
+ 		var str  = `Employee No : ${emp.eno} , Employee Name : ${emp.ename} , Salary : ${emp.slry} , Job : ${emp.job} , DeptNo : ${emp.deptno}`;
+ 		divObj.innerHTML = str;
+      }	
+      function f2()
+      {
+        // Empty Objects
+        var e1 = {};
+        e1.eno = 345;
+        e1.ename = "Shubham";
+        e1.slry = 32000;
+        e1.job = "Analyst";
+        e1.deptno = 789;
+        //var str =  "Employee No :" + eno + "Employee Name :" + ename + "Salary :" + slry + "Job :" + job + "Dept. No :" + deptno ;
+        var str  = `Employee No : ${e1.eno} , Employee Name : ${e1.ename} , Salary : ${e1.slry} , Job : ${e1.job} , DeptNo : ${e1.deptno}`;
+        divObj.innerText = str;
+      }
+      function e2()
+      {
+        this.eno = 105;
+        this.ename = "Suman";
+        this.slry = 20000;
+        this.job = "Analyst";
+        this.deptno = 89;
+      }
+      function f3()
+      {
+        var e3 = new e2();
+        var str  = `Employee No : ${e3.eno} , Employee Name : ${e3.ename} , Salary : ${e3.slry} , Job : ${e3.job} , DeptNo : ${e3.deptno}`;
+        divObj.innerText = str;
+      }
+     
+ </script>
+    </body>
+</html>
