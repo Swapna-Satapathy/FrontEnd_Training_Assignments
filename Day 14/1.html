@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div
+            {
+                border: 2px double black;
+                width: 800px;
+                background-color: black;
+                color: white;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="master">
+
+        </div>
+         <script>
+             //creating paragraph
+            var paraObj = document.createElement("p");
+            paraObj.setAttribute("id" , "p1");
+            paraObj.setAttribute("align","center");
+            paraObj.innerText = "Jay Jagannath";
+
+            //Adding paragraph to div
+            var divObj = document.getElementById("master");
+            divObj.appendChild(paraObj);
+        </script>
+
+        <script>
+            var imgObj = document.createElement("img");
+            imgObj.setAttribute("src","Puri2.webp");
+            //imgObj.setAttribute("src","jagannath1.jpg");
+            imgObj.setAttribute("width","800px");
+            imgObj.setAttribute("height","500px");
+            var divObj1 = document.getElementById("master");
+            divObj1.appendChild(imgObj);
+        </script>
+    </body>
+</html>
