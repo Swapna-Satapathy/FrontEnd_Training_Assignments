@@ -1,0 +1,39 @@
+<html>
+<head></head>
+<body>
+	<hr/> 
+	
+	
+	<div  id="div1"  style="border:2px solid rgb(2, 2, 12); padding:6px; width:500px;">
+	</div>
+	 
+	 
+	<script>
+		var divObj = document.getElementById("div1");
+
+		const  promiseObj  = new Promise( (resolve, reject)  => 
+		{ 					 
+				let  n = Math. floor((Math. random() * 100) + 1);
+				console.log(n);
+				
+				if( n % 5 == 0)
+				{
+						resolve("Promise Resolved :  This number is multiple of 5");		
+				}
+				else
+				{
+					 reject("Promise Rejected  : This number is not multiple of 5");		
+				}		 
+		});	
+		 
+		promiseObj.then(  (response) => 
+		{
+			divObj.innerHTML  +=  " <p style='color:green;'>" +  response + "</p>";
+		})
+		.catch(  (error) => 
+		{
+			divObj.innerHTML  +=   " <p style='color:red;'>" +  error + "</p>";
+		});
+	</script>	 
+</body>
+</html>

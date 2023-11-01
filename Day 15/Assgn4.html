@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <button onclick="getData()">Get Data</button>
+        <br><br>
+        <table id="table1" border="2" width="500" cellpadding="10" cellspacing="2" style="margin-left: 200px;">
+            <tr>
+                <th>Id</th>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Avatar</th>
+            </tr>
+           
+        </table>
+        <script>
+            var tableObj = document.getElementById("table1");
+
+            function getData()
+            {
+                let url = "https://reqres.in/api/users";
+                fetch(url).then( (response)  => 
+		{
+				response.json().then(  (resData)  =>  
+				{ 
+					displayData(  resData.data ); 					
+				});
+		})
+        /* .catch((error) => 
+		{
+				tableObj.innerHTML = "";
+				tableObj.innerHTML  +=  "<tr  style='color:red;'>" + error +  "</tr>"
+		}); */
+            }
+            function   displayData(  dataArray )
+	   {
+			let  str  = "";
+			
+			for(let  item  of  dataArray)
+			{
+				str  +=  `<tr> <td> ${item.id} </td> <td> ${item.email} </td> <td> ${item.first_name} </td> <td> ${item.last_name} </td> <td><img src= "${item.avatar}" /> </td> </tr>`;
+			}			
+			
+			tableObj.innerHTML = str;
+	    }
+        </script>
+       
+    </body>
+</html>

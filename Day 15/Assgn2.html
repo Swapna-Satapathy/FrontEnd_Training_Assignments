@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            fieldset
+            {
+                width: 350px;
+            }
+            button{
+                width: 330px;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Friend's Details</legend>
+      <p>Friend's Name : <input type="text" id="txt1" placeholder="Enter Name" /></p>
+      <p>Contact Number : <input type="text" id="txt2" placeholder="Number" /></p>
+      <button type="button" id="btn1" onclick="add()">Add Friend</button>
+      <br><br>
+      <button type="button" id="btn2" onclick="getNo()">Get Number</button>
+    </fieldset>
+
+    <script>
+          var txtObj1 = document.getElementById("txt1");
+          var txtObj2 = document.getElementById("txt2");
+          var mapObj = new Map();
+
+        function add()
+        {
+            mapObj.set(txtObj1.value , txtObj2.value);
+            console.log(mapObj);
+        }
+        function getNo()
+        {
+            txtObj2.value = mapObj.get(txtObj1.value);
+            console.clear();
+        }
+
+    </script>
+    </body>
+</html>
