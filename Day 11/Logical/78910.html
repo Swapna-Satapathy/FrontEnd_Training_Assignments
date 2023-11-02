@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        let n, n1 = 0;
+        let str = "";
+        for (let n = 1; n <= 400; n++) {
+            n1 = n * n;
+            str = str + n1 + ",";
+        }
+        console.log(str);
+    </script>
+    <script>
+        let num = 0;
+        let st = ",";
+        for (let num = 1; num <= 31; num += 3) {
+            st = st + num + ",";
+        }
+        console.log(st);
+    </script>
+    <script>
+        let no = 0;
+        let strg = ",";
+        for (let no = 10; no <= 200; no += 10) {
+            strg = strg + no + ",";
+        }
+        console.log(strg);
+    </script>
+    <script>
+
+        let first = 1;
+        let second = 1;
+        let result = "1, 1 ";
+
+        for (let i = 2; ; i++) {
+            let next = first + second;
+            if (next <= 300) {
+                result += " ," + next;
+                first = second;
+                second = next;
+            } else {
+                break;
+            }
+        }
+
+        console.log(result);
+    </script>
+</body>
+
+</html>
