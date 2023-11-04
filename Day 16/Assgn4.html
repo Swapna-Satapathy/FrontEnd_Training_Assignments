@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <h4>Product Details</h4>
+    <hr>
+    Product Name :
+    <input type="text" id="t1">
+    <br><br>
+    Price :
+    <input type="text" id="t2">
+    <br><br>
+    Quantity :
+    <input type="text" id="t3">
+    <br><br>
+    <input type="button" value="Amount" onclick="amount()">
+    <p id="p1">Total Amount :</p>
+    <p id="p2">Final Amount :</p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        function amount() {
+            var price = parseFloat($("#t2").val());
+            var qty = parseInt($("#t3").val());
+
+            var total = price * qty;
+
+            $("#p1").html("Total Amount :" + total.toFixed(2));
+
+            if (qty > 10) {
+                var finalPrice = total * 0.9;
+                $("#p2").html("Final Amount :" + finalPrice.toFixed(2));
+
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
