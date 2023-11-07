@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <form id="validationForm">
+        <div>
+            <label for="personName">Person Name:</label>
+            <input type="text" id="personName" name="personName" required>
+        </div><br>
+        <div>
+            <label for="contactNumber">Person Contact Number:</label>
+            <input type="text" id="contactNumber" name="contactNumber" required>
+        </div><br>
+        <div>
+            <label for="vehicleNumber">Vehicle Number:</label>
+            <input type="text" id="vehicleNumber" name="vehicleNumber" required>
+        </div><br>
+        <div>
+            <label for="cityName">City Name:</label>
+            <input type="text" id="cityName" name="cityName" required>
+        </div><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#validationForm').submit(function (e) {
+                e.preventDefault();
+
+                // Regular expressions for validation
+                var nameRegex = /^[A-Za-z]{1,10}$/;
+                var contactNumberRegex = /^\d{10}$/;
+                var vehicleNumberRegex = /^[A-Z]{2}\d{2}[A-Z]{2}\d{4}$/;
+                var cityNameRegex = /^[A-Z]+$/;
+
+                // Validation
+                var personName = $('#personName').val();
+                var contactNumber = $('#contactNumber').val();
+                var vehicleNumber = $('#vehicleNumber').val();
+                var cityName = $('#cityName').val();
+
+                if (!nameRegex.test(personName)) {
+                    alert('Person Name is invalid.');
+                    return;
+                }
+
+                if (!contactNumberRegex.test(contactNumber)) {
+                    alert('Person Contact Number is invalid.');
+                    return;
+                }
+
+                if (!vehicleNumberRegex.test(vehicleNumber)) {
+                    alert('Vehicle Number is invalid.');
+                    return;
+                }
+
+                if (!cityNameRegex.test(cityName)) {
+                    alert('City Name is invalid.');
+                    return;
+                }
+
+                // If all validations pass, you can proceed with form submission
+                alert('Form submitted successfully!');
+            });
+        });
+    </script>
+</body>
+
+</html>
