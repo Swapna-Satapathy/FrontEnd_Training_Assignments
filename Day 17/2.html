@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h3> jQuery Programming - DOM Traversing</h3>
+    <hr />
+
+    <input id="t1" placeholder="product name" />
+    <input id="t2" placeholder="unit price " />
+    <input id="t3" placeholder="quantity" />
+    <br></br>
+
+    <table id="table1" border="2" width="400px">
+        <tr>
+            <th></th>
+            <th>Product Name</th>
+            <th>Unit Price</th>
+            <th>Units In Stock</th>
+        </tr>
+        <tr>
+            <td><a href="#">Select</a></td>
+            <td>Printer</td>
+            <td>900.00</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><a href="#">Select</a></td>
+            <td>4GB-RAM</td>
+            <td>1200.00</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td><a href="#">Select</a></td>
+            <td>Printer</td>
+            <td>2500.00</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><a href="#">Select</a></td>
+            <td>1TB Samsung HDD</td>
+            <td>1200.00</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td><a href="#">Select</a></td>
+            <td>32-GB Kingston USB</td>
+            <td>800.00</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td><a href="#">Select</a></td>
+            <td>Wifi Router</td>
+            <td>1500.00</td>
+            <td>15</td>
+        </tr>
+    </table>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            
+            $("tr th").css("background-color", "lightgreen");
+
+            $(" #table1 tr").each(function () {
+                var qty = $(this).children().eq(3).text();
+
+                if (qty == "0") {
+                    $(this).css("background-color", "pink");
+                }
+                else {
+                    $(this).css("background-color", "skyblue");
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
