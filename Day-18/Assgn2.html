@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<HTML>
+
+<head>
+
+</head>
+
+<body>
+    Input String :<input type="text" id="txt" name="txt"> &nbsp; &nbsp; &nbsp;
+    <button type="button" id="btn">Get Data</button>
+    <ul id="l1">
+
+
+    </ul>
+</body>
+
+</HTML>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+
+            var arr = $("input").val().split(",");
+            for (let items of arr) {
+                str = `<li> ${items.toUpperCase()} </li>`;
+
+                $("#l1").append(str);
+
+
+
+            }
+
+
+        });
+
+
+    }
+    );
+
+</script>
